@@ -1,0 +1,133 @@
+main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main a {
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 1em;
+}
+.card::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.3em;
+  font-weight: 900;
+  content: "\f10e";
+  background-color: #FFF;
+  position: absolute;
+  top: -1em;
+  right: -1.5em;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#text {
+  font-family: 'Roboto Mono', monospace;
+}
+
+body, .btns-container .btn {
+  -webkit-transition: background-color 1.5s;
+  -o-transition: background-color 1.5s;
+  transition: background-color 1.5s;
+}
+
+.btns-container {
+  position: relative;
+  
+  display: -webkit-box;
+  
+  display: -ms-flexbox;
+  
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btns-container .btn {
+  color: #FFF;
+}
+
+.btns-container .btn:hover {
+  color: #DDD;
+}
+
+#text-twquote {
+  padding: 0 .5em;
+  position: absolute;
+  top: -.75em;
+  right: .3em;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+#me {
+  color: #555;
+}
+#me a {
+  font-weight: bolder;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+#me a:hover { text-decoration: underline; }
+
+.fade-quote {
+  -webkit-animation-name: fondo;
+          animation-name: fondo;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fondo {
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fondo {
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .card::after { right: -.4em; }
+}
